@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"> <!-- Background hitam -->
+
+    <!-- Tombol Close -->
+    <TextView
+        android:id="@+id/textViewClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        android:layout_margin="16dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <!-- Judul -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Tambah Rekomendasi"
+        android:textColor="#FFA500"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Gambar Thumbnail -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/textViewTitle"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/gery" /> <!-- Ganti dengan gambar thumbnail -->
+
+    <!-- Judul Film -->
+
+    <!-- Deskripsi -->
+    <EditText
+        android:id="@+id/editTextTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/edittext_background"
+        android:hint="Judul"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF" />
+
+    <!-- Rating -->
+    <EditText
+        android:id="@+id/editTextDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextTitle"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/edittext_background"
+        android:hint="Deskripsi"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF" />
+
+    <!-- Kategori -->
+    <EditText
+        android:id="@+id/editTextRating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextDescription"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/edittext_background"
+        android:hint="Rating"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF" />
+
+    <!-- Tombol Submit -->
+
+    <Spinner
+        android:id="@+id/spinnerCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextRating"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/edittext_background"
+        android:paddingStart="12dp"
+        android:paddingEnd="16dp"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerCategory"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="144dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="11dp"
+        android:backgroundTint="#FFA500"
+        android:text="Submit"
+        android:textColor="#FFFFFF" />
+
+</RelativeLayout>
