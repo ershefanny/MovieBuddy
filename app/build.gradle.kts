@@ -1,25 +1,30 @@
 plugins {
-    alias(libs.plugins.androidApplication)
+    alias(libs.plugins.android.application)
 }
 
 android {
-    namespace = "com.example.activity2"
+    namespace = "com.project.moviebuddy"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.activity2"
-        minSdk = 22
+        applicationId = "com.project.moviebuddy"
+        minSdk = 24
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    buildFeatures {
+        viewBinding = true
+    }
     buildTypes {
         release {
             isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
     compileOptions {
@@ -29,11 +34,16 @@ android {
 }
 
 dependencies {
-
+    implementation(libs.lifecycle.extensions)
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+//    implementation(libs.lifecycle.livedata.ktx)
+//    implementation(libs.lifecycle.viewmodel.ktx)
+    implementation(libs.navigation.fragment)
+    implementation(libs.navigation.ui)
+    implementation(libs.room.common)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
