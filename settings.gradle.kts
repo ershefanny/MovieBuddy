@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "activity2"
+rootProject.name = "Movie Buddy"
 include(":app")
  
